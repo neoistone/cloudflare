@@ -2,9 +2,8 @@
 
 $authemail = "Your Cloudflare Email";
 $authkey   = "Your Cloudflare ApiKey";
-$length = "50"; // how many domain per page
 
-$ch = curl_init("https://api.cloudflare.com/client/v4/zones?page=1&per_page=".$length."&match=all");
+$ch = curl_init("https://api.cloudflare.com/client/v4/zones");
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 	    'X-Auth-Email: '.$authemail,
 	    'X-Auth-Key: '.$authkey,
